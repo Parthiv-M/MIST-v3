@@ -12,6 +12,7 @@ const News = ({ news, categories, bgHolder }) => {
   const userSubscribeInput = (e) => {
     setUserEmail(e.target.value);
   };
+  
   const subscribeUser = async (e) => {
     e.preventDefault();
     document.getElementById("inputEmail").value = null;
@@ -298,9 +299,11 @@ const News = ({ news, categories, bgHolder }) => {
               about the cyber world and we always love when new writers join us.
             </p>
             <div className="md:w-3/4 mx-auto">
-              <button className="bg-blue-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-indigo-600 p-3">
-                Join CyberManipal
-              </button>
+              <a href="https://bit.ly/cybermanipal-author">
+                <button className="bg-blue-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-indigo-600 p-3">
+                  Join CyberManipal
+                </button>
+              </a>
             </div>
           </div>
         </div>

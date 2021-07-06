@@ -33,7 +33,7 @@ export const MakeCard = (socialName, link, fontSize, gap) => {
         <a
           key={link}
           className={classString}
-          href={link}
+          href={`mailto:${link}`}
           target="_blank"
           rel="noreferrer"
         >

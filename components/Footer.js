@@ -7,7 +7,7 @@ const Footer = (props) => {
         <img
           src="/images/logoLight.png"
           alt="MIST logo"
-          className="logo-icon w-1/4 h-2/4 mx-auto"
+          className="logo-icon w-1/4 h-3/5 mx-auto"
         />
         <div className="pt-2 pr-2 flex justify-center">Manipal, India</div>
       </div>
@@ -21,7 +21,7 @@ const Footer = (props) => {
             <a href="https://blogs.wearemist.in/">Blogs</a>
           </p>
           <p className="text-sm text-green-300 hover:text-gray-200 cursor-pointer">
-            Become a writer
+            <a href="https://bit.ly/cybermanipal-author">Become a writer</a>
           </p>
           <p className="text-sm text-green-300 hover:text-gray-200 cursor-pointer">
             <a href="https://yasharyan.com/">Meet the creator</a>
@@ -45,7 +45,9 @@ const Footer = (props) => {
             </Link>
           </p>
           <p className="text-sm text-green-300 hover:text-gray-200 cursor-pointer">
-            Editorial Policy
+            <Link href="/editorialpolicy">
+              <a>Editorial Policy</a>
+            </Link>
           </p>
         </div>
       </div>
