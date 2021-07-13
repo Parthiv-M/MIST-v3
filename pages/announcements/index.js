@@ -13,7 +13,6 @@ const Announcements = ({ announcements }) => {
   const handleUpdate = (open, data) => {
     setOpen(open)
     setDetails(data)
-    console.log("open is: " + open)
   }
 
   return (

@@ -1,7 +1,7 @@
 const AnnouncementCard = (props) => {
 
   return (
-      <div className="md:my-0 my-2 p-5 min-h-44 h-auto md:w-10/12 border-r border-t border-b border-l rounded-lg border-white hover:shadow-lg hover:border-opacity-40">
+      <div className="md:my-2 my-2 p-5 min-h-44 h-auto md:w-10/12 border-r border-t border-b border-l rounded-lg border-white hover:shadow-lg hover:border-opacity-40">
         <div className="text-left text-xl font-semibold">
             <p>{props.date}</p>
         </div> 
