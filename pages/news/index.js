@@ -256,7 +256,7 @@ const News = ({ news, categories, bgHolder }) => {
       </div>
 
       {/* Subscibe Section */}
-      <div className="text-center subscribe-section my-20">
+      <div className="text-center subscribe-section my-20" id="subscribe">
         <div className="overlay py-20 px-10 md:px-0">
           <h3 className="emphasis-heading text-4xl">
             Become a MISTy subscriber

@@ -9,7 +9,7 @@ export default function Home() {
       title: "Cryptography",
       details:
         "Cryptography or cryptology is the practice and study of techniques for secure communication in the presence of third parties called adversaries. More generally, cryptography is about constructing and analyzing protocols that prevent third parties or the public from reading private messages.",
-      color: "#B14748",
+      color: "#10a5f5",
     },
     {
       id: 2,
@@ -23,28 +23,28 @@ export default function Home() {
       title: "Research",
       details:
         "Research and innovation can generate advances that help cybersecurity keep up with the evolving cyber risks. This helps create a trusted and resilient digital environment. We aim to support progress in cybersecurity research by operating as an ambitious, challenge-led research team.",
-      color: "#1565c0",
+      color: "#4545e6",
     },
     {
       id: 4,
       title: "Capture the flags",
       details:
-        "A Cyber Security Capture The Flag(CTF) is a competition between security professionals and/or students learning about Cyber Security. This competition is used as a learning tool for everyone that is interested in Cyber security and it can help sharpen the tools they have learned during their training.",
-      color: "#3AAD79",
+        "A cyber security Capture The Flag(CTF) event is a competition between security professionals and/or students learning about cyber security. This competition is used as a learning tool for everyone who is interested in cyber security and can help sharpen the tools they have learned during their training.",
+      color: "#5e35b1",
     },
     {
       id: 5,
       title: "Cyber Awareness",
       details:
-        "Cyber Security awareness is knowledge combined with attitudes and behaviors that serve to protect our information assets. Being cybersecurity aware means you understand what the threats are and you take the right steps to prevent them.",
-      color: "#689f38",
+        "Cyber security awareness is knowledge combined with attitudes and behaviors that serve to protect our information assets. Being cybersecurity aware means you understand what the threats are and you take the right steps to prevent them.",
+      color: "#4545e6",
     },
     {
       id: 6,
       title: "Networking",
       details:
         "Computer networking refers to connected computing devices (such as laptops, desktops, servers, smartphones, and tablets) and an ever-expanding array of IoT devices (such as cameras, door locks and various sensors) that communicate with one another. Networking is the backbone of the internet itself and often a foundation to Cyber Security.",
-      color: "#f9a825",
+      color: "#10a5f5",
     },
   ];
 
@@ -101,7 +101,7 @@ export default function Home() {
         style={{ backgroundColor: item.color }}
       >
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2 text-white">{item.title}</div>
+          <div className="font-bold text-2xl mb-2 text-white">{item.title}</div>
           <p className="text-gray-200 text-base">{item.details}</p>
         </div>
       </div>
@@ -234,7 +234,7 @@ export default function Home() {
               organize awesome events, and even host awesome game nights within
               the club. In all, we are an awesome club of an awesome university.
             </p>
-            <div className="mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="mx-auto md:w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {whatwedocards}
             </div>
           </div>
@@ -273,16 +273,16 @@ export default function Home() {
             background: #ca4246;
             background-color: #ca4246;
             background: conic-gradient(
-              #ca4246 16.666%,
-              #e16541 16.666%,
-              #e16541 33.333%,
-              #f18f43 33.333%,
-              #f18f43 50%,
-              #8b9862 50%,
-              #8b9862 66.666%,
-              #476098 66.666%,
-              #476098 83.333%,
-              #a7489b 83.333%
+              #80ffa0 16.666%,
+              #1aff53 16.666%,
+              #1aff53 33.333%,
+              #c0ff02 33.333%,
+              #c0ff02 50%,
+              #c0ff02 50%,
+              #c0ff02 66.666%,
+              #10a5f5 66.666%, 
+              #10a5f5 83.333%, 
+              #80ffa0 83.333%
             );
             background-size: 57%;
             background-repeat: repeat;
@@ -290,8 +290,12 @@ export default function Home() {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
-            animation: rainbow-text-animation-rev 2s ease forwards;
+            animation: rainbow-text-animation-rev 2s ease-out alternate;
             animation-iteration-count: infinite;
+          }
+
+          .gradient-text:hover {
+            animation-play-state: paused;
           }
 
           @keyframes rainbow-text-animation {
