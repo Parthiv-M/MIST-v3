@@ -6,7 +6,7 @@ import NewsLite from "../../components/NewsLite";
 import NewsCard from "../../components/NewsCard";
 import { useState } from "react";
 
-const News = ({ news, categories, bgHolder }) => {
+const News = ({ news, categories, bgHolder, stats }) => {
   const [userEmail, setUserEmail] = useState();
 
   const userSubscribeInput = (e) => {
@@ -258,6 +258,20 @@ const News = ({ news, categories, bgHolder }) => {
       {/* Subscibe Section */}
       <div className="text-center subscribe-section my-20" id="subscribe">
         <div className="overlay py-20 px-10 md:px-0">
+          <div className="lg:my-10 my-5 flex lg:flex-row md:flex-row flex-col items-center justify-center">
+            <div className="flex flex-col md:px-10 lg:px-10 py-5 lg:border-r-2 md:border-r-2 border-b-2">
+              <h3 className="text-6xl font-thin">{stats.newsArticles}</h3>
+              <h3 className="uppercase font-black text-2xl">Articles</h3>
+            </div>
+            <div className="flex flex-col md:px-10 lg:px-10 py-5 lg:border-r-2 md:border-r-2 border-b-2">
+              <h3 className="text-6xl font-thin">{stats.writers}</h3>
+              <h3 className="uppercase font-black text-2xl">Writers</h3>
+            </div>
+            <div className="flex flex-col md:px-10 lg:px-10 py-5 md:border-b-2 lg:border-b-2">
+              <h3 className="text-6xl font-thin">{stats.subscribers}</h3>
+              <h3 className="uppercase font-black text-2xl">Subscribers</h3>
+            </div>
+          </div>
           <h3 className="emphasis-heading text-4xl">
             Become a MISTy subscriber
           </h3>
@@ -267,7 +281,7 @@ const News = ({ news, categories, bgHolder }) => {
           </p>
           <div className="w-full text-center">
             <form onSubmit={subscribeUser}>
-              <div className="max-w-sm mx-auto p-1 flex items-center">
+              <div className="max-w-sm mx-auto p-1 flex md:flex-row lg:flex-row flex-col items-center">
                 <input
                   id="inputEmail"
                   type="email"
@@ -277,7 +291,7 @@ const News = ({ news, categories, bgHolder }) => {
                 />
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-indigo-600 p-3"
+                  className="bg-blue-600 text-white text-base font-semibold lg:my-0 my-2 rounded-md shadow-md hover:bg-indigo-600 p-3"
                 >
                   Subscribe
                 </button>
@@ -343,6 +357,8 @@ export const getStaticProps = async () => {
   const news = await resNews.json();
   const resCategories = await fetch(`${SITE_DOMAIN}/api/news/getcategories`);
   const categories = await resCategories.json();
+  const resStats = await fetch(`${SITE_DOMAIN}/api/news?page=stats`);
+  const stats = await resStats.json();
   const bgHolder = [
     "/images/categories/1.jpg",
     "/images/categories/2.jpg",
@@ -356,6 +372,7 @@ export const getStaticProps = async () => {
       news,
       categories,
       bgHolder,
+      stats
     },
     revalidate: 60,
   };
