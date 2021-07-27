@@ -77,7 +77,7 @@ const Announcements = ({ announcements }) => {
           Club activity from MIST
         </p>
       </div>
-      <div className="mx-auto p-10 grid grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto p-10 grid grid-cols-1 md:grid-cols-3">
       {
         announcements.data.map((data) => {
           return <AnnouncementCard 

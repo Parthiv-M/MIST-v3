@@ -1,11 +1,11 @@
 const AnnouncementCard = (props) => {
 
   return (
-      <div className="md:my-2 my-2 p-5 min-h-44 h-auto md:w-10/12 border-r border-t border-b border-l rounded-lg border-white hover:shadow-lg hover:border-opacity-40">
+      <div className="md:my-2 my-2 p-5 min-h-44 h-auto md:w-11/12 border-r border-t border-b border-l rounded-lg border-white hover:shadow-lg hover:border-opacity-40">
         <div className="text-left text-xl font-semibold">
             <p>{props.date}</p>
         </div> 
-        <h1 className="md:text-4xl text-left emphasis-heading blue-gradient-text text-3xl pb-5">{props.heading}</h1>
+        <h1 className="md:text-4xl text-left emphasis-heading blue-gradient-text md:h-3/6 text-3xl pb-5">{props.heading}</h1>
         <div className="md:text-right text-left">
             <button
               type="button"

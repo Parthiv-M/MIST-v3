@@ -27,7 +27,7 @@ const Editorialpolicy = () => {
         <meta property="og:type" content="disclaimer" />
         <meta
           property="og:title"
-          content="Privacy Policy | Manipal Information Security Team"
+          content="Editorial Policy | Manipal Information Security Team"
         />
         <meta
           property="og:description"
@@ -128,8 +128,8 @@ const Editorialpolicy = () => {
           How to contribute to CyberManipal?
         </h2>
         <p>
-          Create a profile for yourself on CyberManipal by filling out <a href="bit.ly/cybermanipal-author" target="_blank" rel="noreferrer">this form</a>. Contribute to CyberManipal by submitting your write-up to 
-          us through <a href="bit.ly/cybermanipal-submission" target="_blank" rel="noreferrer">this link</a>.
+          Create a profile for yourself on CyberManipal by filling out <a href="https://bit.ly/cybermanipal-author" target="_blank" rel="noreferrer" className="text-blue-800">this form</a>. Contribute to CyberManipal by submitting your write-up to 
+          us through <a href="https://bit.ly/cybermanipal-submission" target="_blank" rel="noreferrer" className="text-blue-800">this link</a>.
         </p>
         <br />   
 
