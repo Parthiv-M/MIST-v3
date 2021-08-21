@@ -151,7 +151,7 @@ const Latest = ({ newsItem, author, url }) => {
           Click here to see the original post
         </a>
       </div>
-      <div className="text-left md:w-1/2 px-5 mx-auto mt-5">
+      <div className="text-left md:w-1/2 px-5 lg:mx-auto md:mx-auto mt-5">
         <p className="text-bold text-base text-green-300">Share this article</p>
         <div className="pt-3">
           <FacebookShareButton
