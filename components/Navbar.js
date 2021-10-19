@@ -10,7 +10,11 @@ const navigation = [
   { name: "Team", match: "team", href: "/team" },
   { name: "Announcements", match: "announcements", href: "/announcements" },
   { name: "Alumni", match: "alumni", href: "/alumni" },
-  { name: "News", match: "news", href: "/news" },
+  { 
+    name: "News", 
+    match: "na", 
+    href: "https://cybermanipal.wearemist.in"
+  },
   {
     name: "Blogs",
     match: "na",
