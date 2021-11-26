@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
+import EventSnackbar from "./EventSnackbar";
 
 const navigation = [
   { name: "Home", match: "", href: "/" },
@@ -30,10 +31,21 @@ const navigation = [
 const Navbar = () => {
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(router.pathname.split("/")[1]);
+
+  const [scroll, setScroll] = useState(false)
+
   useEffect(() => {
     // Update the document title using the browser API
     const pageName = router.pathname.split("/")[1];
     setCurrentPage(pageName);
+    
+    const handleScroll = () => {
+      setScroll(window.scrollY > 45);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return function cleanupListener() {
+      window.removeEventListener('scroll', handleScroll);
+    }
   });
 
   const closeNavbar = () => {
@@ -42,9 +54,11 @@ const Navbar = () => {
 
   return (
     <Fragment>
+      <EventSnackbar /> 
       <Disclosure
         as="nav"
-        className="navbar fixed w-full"
+        className={`navbar ${scroll ? "fixed top-0" : "relative" } w-full`}
+        id="nav"
         style={{ backgroundColor: "#121212", zIndex: "1000" }}
       >
         {({ open }) => (
