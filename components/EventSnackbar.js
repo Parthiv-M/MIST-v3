@@ -2,7 +2,7 @@ const EventSnackbar = () => {
     return (
         <div className="w-screen md:h-12 py-2 bg-green-400 flex md:flex-row flex-col justify-center items-center">
             {/* <p className="mx-1 md:block hidden font-bold text-green-900">UPDATES!</p> */}
-            <p className="font-bold text-grey-100">Working Recruitment Recruitments</p>
+            <p className="font-bold text-grey-100">Working Committee Recruitments</p>
             <div className="flex">
                 <a className="hover:text-green-700 text-green-900 cursor-pointer" href="https://forms.gle/gBvSWHoL54jMceg96" target="_blank" rel="noreferrer">
                     <p className="ml-1 font-bold underline">Register here</p>
