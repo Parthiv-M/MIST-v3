@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <EventSnackbar /> 
+      {/* <EventSnackbar />  */}
       <Disclosure
         as="nav"
         className={`navbar ${scroll ? "fixed top-0" : "relative" } w-full`}
