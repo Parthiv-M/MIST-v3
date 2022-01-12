@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { SITE_DOMAIN } from "../utils/constants";
 import TeamCard from "../components/TeamCard.js";
+import WCCard from "../components/WCCard.js";
 
 const Team = ({ board, mancomm, workcomm }) => {
   return (
@@ -124,9 +125,9 @@ const Team = ({ board, mancomm, workcomm }) => {
           information for us, although it is a fact that we do more work than
           the Board.
         </p>
-        <div className="p-2 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 mx-auto">
+        <div className="p-2 grid grid-cols-1 md:grid-cols-4 gap-1 mx-auto">
           {workcomm.data.map((item) => (
-            <TeamCard
+            <WCCard
               key={item._id}
               name={item.name}
               photo={item.photo}
